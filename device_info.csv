@@ -1,0 +1,2 @@
+session_name,hostname,protocol=SSH2,username,password,enable_secret
+<device name>,172.16.1.240,,cisco,cisco,cisco
