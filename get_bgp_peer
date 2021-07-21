@@ -1,0 +1,33 @@
+                for conn in bgp_conns:
+
+                        conn_list = []
+
+                        # separate juniper output of <show bgp neighbor | match "^Peer:|Desc|Flags:">
+
+                        bgp_params = re.split('\s+|\+', conn)
+
+                        # retrieve RR status
+
+                        rr_client = re.findall(r'\((.*?)\)', conn)
+
+#                       print bgp_params
+
+                        Peer=bgp_params[1]
+
+#                       print Peer
+
+                        RemoteAS=bgp_params[4]
+
+                        Hostname=bgp_params[11]
+
+                        Type=bgp_params[13]
+
+                        State=bgp_params[15]
+
+                        conn_list.extend([Peer, RemoteAS, Hostname, Type, State, rr_client])
+
+#                       print conn_list
+
+                        conns_list.append(conn_list)
+
+#                       print conns_list
