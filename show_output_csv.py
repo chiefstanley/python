@@ -1,16 +1,8 @@
-"""
-    DEFINE PURPOSE OF SCRIPT
-"""
+
 import csv
 import cisco_ios_show_crypto
 from datetime import datetime
 from netmiko import SSHDetect, ConnectHandler
-
-'''
-    AUTHOR INFORMATION
-'''
-__author__ = 'Calvin Remsburg'
-# (c) 2016, packetferret.
 
 '''
     TIMESTAMPS - START
@@ -63,7 +55,7 @@ with open('device_info.csv', mode='r') as csvfile:
             cisco_ios_show_crypto.show_crypto(ssh_session, hostname)
         '''		
         elif detected_type == 'cisco_asa':
-		'''
+	'''
 '''
     MAIN APP - FINISH
 '''
