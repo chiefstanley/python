@@ -1,7 +1,4 @@
-"""
-This is module showing specific output.
-Module is named as <producer>_<platform>_<action>_<item>
-"""
+
 
 import os
 import re
