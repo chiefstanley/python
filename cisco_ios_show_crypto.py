@@ -24,8 +24,7 @@ def show_crypto(ssh_session, hostname):
 	'''
 		 create csv file for show crypto ipsec sa
 	'''
-	ikev2_sa_csv = os.path.join(os.getcwd(),
-								hostname + str(datetime.now().strftime('_%Y%m%d%H%M%S')) + '_show_ikev2.csv')
+	ikev2_sa_csv = os.path.join(os.getcwd(),hostname + str(datetime.now().strftime('_%Y%m%d%H%M%S')) + '_show_ikev2.csv')
 	with open(ikev2_sa_csv, 'w', newline='') as f:
 		header = ['Tunnel-id', 'Local-IP', 'Remote-IP', 'fvrf', 'ivrf']
 		'''
@@ -44,8 +43,7 @@ def show_crypto(ssh_session, hostname):
 		writer = csv.writer(f)
 		writer.writerow(header)
 		writer.writerows(ikev2_sa_item) # write parent list to csv file
-	ipsec_sa_csv = os.path.join(os.getcwd(),
-								hostname + str(datetime.now().strftime('_%Y%m%d%H%M%S')) + '_show_ipsec.csv')
+	ipsec_sa_csv = os.path.join(os.getcwd(),hostname + str(datetime.now().strftime('_%Y%m%d%H%M%S')) + '_show_ipsec.csv')
 	with open(ipsec_sa_csv, 'w', newline='') as f:
 		header = ['Local-Endpt', 'Remote-Endpt',
 				  'Local-Ident', 'Remote-Ident', 'Encryt', 'Decryt', 'Outbnd-SPI']
