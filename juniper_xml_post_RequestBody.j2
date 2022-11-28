@@ -1,0 +1,22 @@
+<lock-configuration/>
+  <load-configuration>
+  <configuration>
+            <interfaces>
+                <interface>
+                    <name>{{ interface }}</name>
+                    <unit>
+                        <name>{{ unit }}</name>
+                        <family>
+                            <inet>
+                                <address>
+                                    <name>{{ IP }}</name>
+                                </address>
+                            </inet>
+                        </family>
+                    </unit>
+                </interface>
+            </interfaces>
+	</configuration>
+</load-configuration>
+<commit/>
+<unlock-configuration/>

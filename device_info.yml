@@ -1,0 +1,11 @@
+---
+ios-xe:
+  - mgmt_ip: 172.16.1.153
+    username: cisco
+    password: cisco
+  - mgmt_ip: 172.16.1.111
+    username: cisco
+    password: cisco
+  - mgmt_ip: 172.16.1.113
+    username: cisco
+    password: cisco
