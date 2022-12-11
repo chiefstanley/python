@@ -13,7 +13,7 @@ src_ips = re.split(', *|; *| *', input("Source IPs: "))
 dst_ips = re.split(', *|; *| *', input("Destination IPs: "))
 proto = input("Protocol: ")
 ports = re.findall(r'\d+', input("Destination Ports: "))
-ASAs = list(input("Please select: asa134 asa136 asa154 asa170\n").split())
+ASAs = list(input("Please select: asa1 asa2 asa3 asa4\n").split())
 password = getpass("Password: ")
 
 def ASARouteGen(conn, password):
